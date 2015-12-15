@@ -1,13 +1,12 @@
 Meteor.methods({
 	checkFoursquare: function (query, radius, lat, lng) {
-		
-	  	if(!this.userId) {
-      		throw new Meteor.Error('Permission denied');
-    	}
-
 	    if (!Meteor.settings.FOURSQUARE_SECRET || !Meteor.settings.FOURSQUARE_ID) {
 	      throw new Meteor.Error('Foursqaure not configured');
 	    }
+
+	    if(!this.userId) {
+      		throw new Meteor.Error('Permission denied');
+    	}
 
 	    var url = "https://api.foursquare.com/v2/venues/search?ll=" + lat + "," + lng + 
 	    "&radius=" + radius + 
