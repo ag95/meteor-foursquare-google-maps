@@ -6,7 +6,7 @@ Meteor.methods({
 
 	    if (!this.userId) {
       		throw new Meteor.Error('Permission denied');
-    	}
+    	    }
 
 	    var url = "https://api.foursquare.com/v2/venues/search?ll=" + lat + "," + lng + 
 	    "&radius=" + radius + 
