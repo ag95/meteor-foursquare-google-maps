@@ -1,6 +1,7 @@
 Meteor.methods({
 	checkFoursquare: function (query, radius, lat, lng) {
-		if(!this.userId) {
+		
+	  	if(!this.userId) {
       		throw new Meteor.Error('Permission denied');
     	}
 
