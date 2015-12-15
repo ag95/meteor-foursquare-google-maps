@@ -7,7 +7,6 @@ Queries.allow({
   },
 });
 
-
 // subscribe
 if (Meteor.isClient) {
 
@@ -15,7 +14,6 @@ if (Meteor.isClient) {
     Meteor.subscribe('queries');
   });
 }
-
 
 // publication
 if (Meteor.isServer) {
