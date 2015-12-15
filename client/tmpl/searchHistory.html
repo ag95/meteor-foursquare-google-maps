@@ -1,0 +1,37 @@
+<template name="searchHistory">
+  {{#if haveQueries}}
+    <h3>Recent queries:</h3>
+    <button type="button" class="btn btn-default" data-action="remove-all">Clear query history</button>
+      <div class="col-sm-12">
+        <table class="table table-condensed table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Radius</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each queries}}
+              <tr>
+                <td>
+                  <button class="btn btn-sm btn-link" data-action="remove">
+                    <i class="fa fa-trash"></i>
+                  </button>
+                  <strong>{{query}}</strong>
+                </td>
+                <td>{{toFixed lat 6}}</td>
+                <td>{{toFixed lng 6}}</td>
+                <td>{{radiusKm}}km</td>
+                <td>{{createdAt}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+  {{/if}}
+</template>
+
+

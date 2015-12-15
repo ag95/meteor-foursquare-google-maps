@@ -1,0 +1,32 @@
+<template name="venues">
+  {{#if venueResults}}
+    <div class="col-sm-12 venues-results">
+      <h3>
+          {{venuesCount}}
+        <button data-action="export" class="pull-right btn btn-primary">Export to CSV</button>
+      </h3>
+      <table class="table-hover table table-condensed table-striped table-responsive">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Street Address</th>
+            <th>Latitude</th>
+            <th>longitude</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each venueResults}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{location.city}}</td>
+              <td>{{location.address}}</td>
+              <td>{{location.lat}}</td>
+              <td>{{location.lng}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  {{/if}}
+</template>

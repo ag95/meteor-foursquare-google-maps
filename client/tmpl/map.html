@@ -1,0 +1,10 @@
+<template name="map">
+	<div class="col-sm-12">  
+		<form class="form-horizontal">
+			<input class="form-control" name="query" type="text" placeholder="Search">
+		</form>
+	</div>
+	<div id="map" class="map-container">
+	    {{> googleMap name="map" options=mapOptions}}
+	</div>
+</template>  
