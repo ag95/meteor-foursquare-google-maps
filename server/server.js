@@ -4,7 +4,7 @@ Meteor.methods({
 	      throw new Meteor.Error('Foursqaure not configured');
 	    }
 
-	    if(!this.userId) {
+	    if (!this.userId) {
       		throw new Meteor.Error('Permission denied');
     	}
 
@@ -16,7 +16,7 @@ Meteor.methods({
 	    try { 
 	    	result = Meteor.http.call("GET", url);
 	    } catch(error) {
-	      throw new Meteor.Error('Foursquare api call failed');
+	    	throw new Meteor.Error('Foursquare api call failed');
 	    }
 
 	    // save query in db
