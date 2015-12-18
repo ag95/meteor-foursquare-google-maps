@@ -8,6 +8,6 @@ Setup `server/settings.json`
  "FOURSQUARE_SECRET":"XXXXXXXXX"
 }`
 
-and run `meteor --settings /server/settings.json`
+and run `meteor --settings server/settings.json`
 
 [Online Demo](http://alexeymeteorvenue.meteor.com/)
