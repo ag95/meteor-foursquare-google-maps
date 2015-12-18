@@ -10,4 +10,4 @@ Setup `server/settings.json`
 
 and run `meteor --settings server/settings.json`
 
-[Online Demo](http://alexeymeteorvenue.meteor.com/)
+[Online Demo](http://testmeteorvenue.meteor.com/)
