@@ -9,5 +9,3 @@ Setup `server/settings.json`
 }`
 
 and run `meteor --settings server/settings.json`
-
-[Online Demo](http://testmeteorvenue.meteor.com/)
